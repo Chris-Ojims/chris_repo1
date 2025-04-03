@@ -16,7 +16,7 @@ if (!isset($_SESSION['id'])) {
     <title>Dashboard</title>
 </head>
 <body>
-    <h2>Welcome, <?php echo $_SESSION['full_name']; ?>!</h2>
+    <h2>Welcome, <?php echo $_SESSION['name']; ?>!</h2>
     <p>You are logged in successfully.</p>
     <a href="logout.php">Logout</a>
 

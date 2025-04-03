@@ -13,8 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['pswd'])) {
-        $_SESSION['user_id'] = $user['user_id'];
-        $_SESSION['full_name'] = $user['full_name'];
+        $_SESSION['id'] = $user['user_id'];
+        $_SESSION['name'] = $user['full_name'];
         header("Location: miniproj_dashboard.php");
         exit;
     } else {

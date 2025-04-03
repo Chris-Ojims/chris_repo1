@@ -1,22 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN PAGE</title>
+
+    <style>
+        body {
+            /* display: flex; */
+            /* display: grid; */
+            width: 100%;
+            height: 620px;
+            /* background-color: #ff7a18; */
+            background: linear-gradient(135deg, rgb(92, 5, 174), rgb(122, 24, 193), #db7227);
+        }
+
+        /* .container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(92, 5, 174);
+            box-sizing: border-box;
+        } */
+
+        .heading1 {
+            width: 624px;
+            /* width: 680px; */
+            height: 440px;
+            color: white;
+            position: absolute;
+            margin-left: 60px;
+            margin-top: 60px;
+            margin-bottom: 400px;
+            padding-top: 50px;
+            padding-left: 30px;
+            /* background-color: rgb(122, 24, 193); */
+            background: linear-gradient(145deg, rgb(122, 24, 193) 45%, #ff7a18);
+            text-align: left;
+        }
+
+        .heading2 {
+            float: right;
+            width: 430px;
+            height: 440px;
+            position: relative;
+            margin-left: 100px;
+            margin-right: 60px;
+            margin-top: 60px;
+            padding-left: 60px;
+            padding-top: 50px;
+            /* text-align: center; */
+            background-color: white;
+        }
+
+        .heading2 button {
+            cursor: pointer;
+        }
+
+        .heading2 button:hover {
+            background-color: chartreuse;
+        }
+
+        /* Media Querry (Mobile View) section: */
+        @media (max-width: 768px) {
+            .heading1 {
+                display: none;
+            }
+
+            .heading2 {
+                position: absolute;
+                margin-left: 30px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-   <h2>Login</h2>
-   <form method="post" action="miniproj_login.php">
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="Email Address" required><br>
+    <div class="container">
+        <div class="heading1">
+            <h2>Welcome to website</h2>
+            <p>Having been directed to this login page is an indication of a successful registration. On this
+                page, you are expected to enter your registerred email address and password which you created during
+                registration in the email and password fields, respectively. Then, click on the "Login" button to
+                submit. A successful login automatically directs you to the homepage. Otherwise, you will be required to
+                try again - ensuring you're using your correct email address and password. If you are not already
+                registerred, please follow the link "Register here" to create an account. </p>
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="pswd" placeholder="Enter Your Password" required><br><br>
-    <button type="submit">Login</button>
+        </div>
+        <div class="heading2">
+            <h2>Login</h2>
+            <form method="post" action="miniproj_login.php">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Email Address" required><br>
 
-   </form>
-   <p>Don't have an account? <a href="miniproj.html">Register here</a></p>
-    
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="pswd" placeholder="Enter Your Password" required><br><br>
+                <button type="submit">Login</button>
+
+            </form>
+            <p>Don't have an account? <a href="miniproj.html">Register here</a></p>
+        </div>
+    </div>
+
 </body>
+
 </html>
