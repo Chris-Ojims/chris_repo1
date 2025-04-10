@@ -8,22 +8,11 @@
 
     <style>
         body {
-            /* display: flex; */
-            /* display: grid; */
             width: 100%;
             height: 620px;
             /* background-color: #ff7a18; */
             background: linear-gradient(135deg, rgb(92, 5, 174), rgb(122, 24, 193), #db7227);
         }
-
-        /* .container {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: rgb(92, 5, 174);
-            box-sizing: border-box;
-        } */
 
         .heading1 {
             width: 624px;
@@ -55,12 +44,43 @@
             background-color: white;
         }
 
-        .heading2 button {
+        .heading2 h2 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #email {
+            border-radius: 8px;
+        }
+
+        #email:hover {
             cursor: pointer;
+            background-color: bisque;
+        }
+
+        #password {
+            border-radius: 8px;
+        }
+
+        #password:hover {
+            cursor: pointer;
+            background-color: bisque;
+        }
+
+        .heading2 button {
+            color: white;
+            background: #db7227;
+            cursor: pointer;
+            border-radius: 7px;
         }
 
         .heading2 button:hover {
             background-color: chartreuse;
+        }
+
+        .forgot-pswd {
+            float: right;
+            margin-top: -17px;
+            margin-right: 150px;
         }
 
         /* Media Querry (Mobile View) section: */
@@ -71,7 +91,8 @@
 
             .heading2 {
                 position: absolute;
-                margin-left: 30px;
+                margin-left: 20px;
+                /* margin-right: 0px; */
             }
         }
 
@@ -91,17 +112,18 @@
 
         </div>
         <div class="heading2">
-            <h2>Login</h2>
+            <h2>LOGIN</h2>
             <form method="post" action="miniproj_login.php">
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="Email Address" required><br>
+                <label for="email"><b>Email:</b></label><br>
+                <input type="email" id="email" name="email" placeholder="Email Address" required><br><br>
 
-                <label for="password">Password:</label><br>
+                <label for="password"><b>Password:</b></label><br>
                 <input type="password" id="password" name="pswd" placeholder="Enter Your Password" required><br><br>
-                <button type="submit">Login</button>
-
+                <br>
+                <button type="submit">LOGIN</button>
             </form>
-            <p>Don't have an account? <a href="miniproj.html">Register here</a></p>
+            <p class="forgot-pswd"><a href="miniproj_resetpswd.php">Forgot Password?</a></p><br>
+            <p><b>Don't have an account?</b> <a href="miniprojs.php">Register here</a></p>
         </div>
     </div>
 

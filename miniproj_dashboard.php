@@ -108,12 +108,29 @@ if (!isset($_SESSION['id'])) {
       background-color: blue;
     }
 
-    .greetings {
+    .greetings { 
       position: absolute;
-      top: 140px;
-      /* top: 90px; */
-      margin-left: 40px;
+      top: 98px;
+      margin-left: 600px;
+      /* margin-left: 40px; */
       color: white;
+      z-index: 1000;
+    }
+
+    .greetings h2 {
+      margin-top: -60px;
+      /* margin-top: -65px; */
+      font-size: 25px;
+    }
+
+    .greetings p {
+      margin-top: 12px;
+    }
+
+    .greetings a {
+      float: right;
+      margin-top: -40px;
+      /* margin-top: -35px; */
     }
 
     .card-group img {
@@ -168,8 +185,40 @@ if (!isset($_SESSION['id'])) {
     z-index: 1000; /* Ensure carousel stays behind the navbar */
   }
 
- 
+  .greetings { 
+      position: absolute;
+      top: 135px;
+      margin-left: 130px;
+      /* margin-left: 40px; */
+      color: white;
+      z-index: 2000;
     }
+
+    .greetings h2 {
+      margin-top: -60px;
+      /* margin-top: -65px; */
+      font-size: 15px;
+    }
+
+    .greetings p {
+      margin-top: -10px;
+      font-size: 12px;
+    }
+
+    .greetings a {
+      /* float: right; */
+      margin-top: -34px;
+      margin-right: -30px;
+      font-size: 12px;
+      /* margin-top: -35px; */
+    }
+    .service h2{
+      position: absolute;
+      top:10px;
+     font-size:25px;
+    }
+
+ }
     
   </style>
 
@@ -259,6 +308,10 @@ if (!isset($_SESSION['id'])) {
         </div>
         <div class="carousel-item">
           <img src="Images/side-view-beautiful-woman-with-braids.jpg" class="d-block w-100" alt="...">
+          <div class="service">
+      <h2>Financial solutions<br>for New business.</h2><br>
+      <button type="button"><small><small>FINANCIAL SERVICES</small></small></button>
+    </div>
         </div>
       
       </div>
@@ -273,10 +326,10 @@ if (!isset($_SESSION['id'])) {
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <div class="service">
+    <!-- <div class="service">
       <h2>Financial solutions<br>for New business.</h2><br>
       <button type="button"><small><small>FINANCIAL SERVICES</small></small></button>
-    </div>
+    </div> -->
 
   </section>
 
@@ -325,6 +378,9 @@ if (!isset($_SESSION['id'])) {
               <div class="carousel-item">
                 <img src="Images/consulting_image1.webp" class="d-block w-100" alt="...">
               </div>
+              <div class="carousel-item">
+                <img src="Images/consulting_image2.webp" class="d-block w-100" alt="...">
+              </div>
             </div>
           </div>
           <!-- <img src="Images/consulting_image3.webp" class="img-fluid rounded-start" alt="..."> -->
@@ -352,8 +408,8 @@ if (!isset($_SESSION['id'])) {
       <h2>Welcome,
         <?php echo $_SESSION['name']; ?>!
       </h2>
-      <p>You are logged in successfully.</p>
-      <a href="miniproj_logout.php">Logout</a>
+      <p><small>You are logged in successfully.</small></p>
+      <a href="miniproj_logout.php"><small>Logout</small></a>
     </div>
   </section>
 

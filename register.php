@@ -34,3 +34,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+// Form Validation Section:
+// Initialize variables
+// $name = $email = $password = "";
+// $nameErr = $emailErr = $passwordErr = "";
+
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Validate name
+//     if (empty($_POST['name'])) {
+//         $nameErr = "Name is required.";
+//     } else {
+//         $name = testInput($_POST['name']);
+//         if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+//             $nameErr = "Only letters and spaces are allowed.";
+//         }
+//     }
+
+//     // Validate email
+//     if (empty($_POST['email'])) {
+//         $emailErr = "Email is required.";
+//     } else {
+//         $email = testInput($_POST['email']);
+//         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+//             $emailErr = "Invalid email format.";
+//         }
+//     }
+
+//     // Validate password
+//     if (empty($_POST['password'])) {
+//         $passwordErr = "Password is required.";
+//     } else {
+//         $password = testInput($_POST['password']);
+//         if (!preg_match("/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{7,}$/", $password)) {
+//             $passwordErr = "Password must be at least 7 characters, include a capital letter, a number, and a special character.";
+//         }
+
+//     // My added condition
+//    if (preg_match("/^[a-zA-Z\d\W_]{8,}$/", $pswd)) {
+//     echo "Form submitted successfully!";
+//    }
+
+//     }
+// }
+
+// // Function to sanitize input
+// function testInput($data) {
+//     return htmlspecialchars(stripslashes(trim($data)));
+// }
