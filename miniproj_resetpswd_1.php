@@ -1,4 +1,3 @@
-
 <?php
 require 'miniproj_dbconnect.php';
 
@@ -64,53 +63,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESET PASSWORD</title>
-
+    <title>Reset Password</title>
     <style>
-      .form-box { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; }
-
-        body {
-            text-align: center;
-            box-sizing: border-box;
-            background-color: darkgrey;        }
-
-        p {
-            /* margin-top: -70px; */
-            margin-top: -80px;
-        }
-
-        form {
-            max-width: 500px;
-            /* height: 220px; */
-            height: 320px;
-            margin: 0 auto;
+        .form-box {
+            max-width: 400px;
+            margin: auto;
             padding: 20px;
-            background-color: bisque;
-            box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
-        }
-
-        .form-box > input {
-            border-radius: 7px;
-        }
-
-        .form-box > input:hover {
-            cursor: pointer;
-            background-color: aquamarine;
-        }
-
-        .form-box button {
-            border-radius: 7px;
-            color: white;
-            background-color: darkgrey;
-        }
-
-        .form-box button:hover {
-            cursor: pointer;
-            background-color: green;
+            border: 1px solid #ccc;
         }
 
         .error {
@@ -125,33 +86,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin-bottom: 10px;
         }
 
+        input {
+            width: 100%;
+            padding: 8px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h2>Forgot Password?</h2>
-    <form action="miniproj_resetpswd.php" method="post" class="form-box">
+    <form method="post" class="form-box" action="miniproj_resetpswd.php">
         <h2>Reset Password</h2>
 
         <?php if ($successMsg): ?>
             <p class="success"><?php echo $successMsg; ?></p>
         <?php endif; ?>
 
-        <label for="email"><b>Email:</b></label><br>
-        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" placeholder="Enter your registered email">
-        <span class="error"><?php echo $emailErr; ?></span><br><br>
+        <label for="email"><b>Email:</b></label>
+        <input type="email" name="email" value="<?php echo htmlspecialchars($email); ?>" placeholder="Enter your registered email">
+        <span class="error"><?php echo $emailErr; ?></span>
 
-        <label for="pswd"><b>New Password:</b></label><br>
+        <label for="pswd"><b>New Password:</b></label>
         <input type="password" name="pswd" placeholder="Enter new password">
-        <span class="error"><?php echo $passwordErr; ?></span><br><br>
+        <span class="error"><?php echo $passwordErr; ?></span>
 
-        <label for="confirm_pswd"><b>Confirm Password:</b></label><br>
+        <label for="confirm_pswd"><b>Confirm Password:</b></label>
         <input type="password" name="confirm_pswd" placeholder="Re-enter new password">
-        <span class="error"><?php echo $confirmErr; ?></span><br><br>
+        <span class="error"><?php echo $confirmErr; ?></span>
 
+        <br><br>
         <button type="submit">Update Password</button>
     </form>
-    <br><br>
-    <p style="text-align: center;"><a href="miniproj_login.html">Back to Login</a></p>
 
+    <p style="text-align: center;"><a href="miniproj_login.html">Back to Login</a></p>
 </body>
 </html>

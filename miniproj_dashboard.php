@@ -16,6 +16,11 @@ if (!isset($_SESSION['id'])) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
+
   <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
 
   <style>
@@ -68,7 +73,7 @@ if (!isset($_SESSION['id'])) {
       top: 0px;
       /* top: 30px; */
       height: 45px;
-      background-color: white;
+      /* background-color: white; */
     }
 
     .navbar button {
@@ -80,7 +85,8 @@ if (!isset($_SESSION['id'])) {
     }
 
     .active-first img {
-      height: 807px;
+      height: 900px;
+      /* height: 807px; */
     }
 
     .carousel-item>img {
@@ -89,18 +95,24 @@ if (!isset($_SESSION['id'])) {
       /* height: 900px; */
     }
 
-    .service h2 {
-      position: absolute;
-      top: 300px;
-      /* top: 260px; */
-      margin-left: 40px;
-      color: blue;
+    .carousel-item1 img {
+      height: 900px;
+      /* height: 876px; */
     }
 
-    .service button {
+    .service1 h2 {
       position: absolute;
-      /* top: 360px; */
-      top: 410px;
+      /* top: 300px; */
+      top: 120px;
+      margin-left: 40px;
+      color: blue;
+      font-size: 40px;
+    }
+
+    .service1 button {
+      position: absolute;
+      top: 300px;
+      /* top: 410px; */
       color: white;
       margin-left: 40px;
       padding-left: 20px;
@@ -108,10 +120,50 @@ if (!isset($_SESSION['id'])) {
       background-color: blue;
     }
 
-    .greetings { 
+    .service2 h2 {
+      position: absolute;
+      /* top: 300px; */
+      top: 120px;
+      margin-left: 40px;
+      color: blue;
+      font-size: 40px;
+    }
+
+    .service2 button {
+      position: absolute;
+      top: 300px;
+      /* top: 410px; */
+      color: white;
+      margin-left: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: blue;
+    }
+
+    .service3 h2 {
+      position: absolute;
+      /* top: 300px; */
+      top: 120px;
+      margin-left: 40px;
+      color: blue;
+      font-size: 40px;
+    }
+
+    .service3 button {
+      position: absolute;
+      top: 300px;
+      /* top: 410px; */
+      color: white;
+      margin-left: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: blue;
+    }
+
+    .greetings {
       position: absolute;
       top: 98px;
-      margin-left: 600px;
+      margin-left: 660px;
       /* margin-left: 40px; */
       color: white;
       z-index: 1000;
@@ -154,72 +206,210 @@ if (!isset($_SESSION['id'])) {
       height: 400px;
     }
 
+    .card-title {
+      color: blue;
+    }
+
+    .col-sm-4 img {
+      width: 35px;
+      height: 25px;
+      margin-top: -20px;
+      margin-left: 160px;
+    }
+
+    .carousel-inner h2 {
+      color: blue;
+      background-color: chartreuse;
+      animation-name: effects;
+      animation-delay: 1s;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes effects {
+      0% {
+        background-color: chartreuse;
+        color: blue;
+        left: 0px;
+        top: 0px;
+      }
+
+      25% {
+        background-color: cyan;
+        color: red;
+        left: 150px;
+        top: 0px;
+      }
+
+      50% {
+        background-color: blueviolet;
+        color: yellow;
+        left: 150px;
+        top: 150px;
+      }
+
+      75% {
+        background-color: magenta;
+        color: green;
+        left: 0px;
+        top: 150px;
+      }
+
+      100% {
+        background-color: chartreuse;
+        color: blue;
+        left: 0px;
+        top: 0px;
+      }
+    }
+
     /* Mobile View */
     @media (max-width: 768px) {
-      /* .navbar {
+      .navbar-collapse {
         display: none;
+      }
+
+      .navbar-collapse.show {
+        display: block;
+      }
+
+      /* .navbar-toggler {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.0rem;
+        color: #000;
       } */
+
+      .custom-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #000;
+      }
 
       .navbar button {
-        display: flex;
+        display: block;
       }
 
-      /* .menu-toggle {
-        display: none;
-      } */
-
-      .sidebar-menu {
-        float: right;
+      .navbar-brand {
+        /* position: absolute; */
+        /* margin-left: 17px; */
+        flex: auto;
       }
 
-      .container-fluid a {
-        position: absolute;
-        margin-left: 17px;
-      }
       .navbar {
-    position: relative; /* or fixed if needed */
-    z-index: 1050; /* Higher than the carousel's z-index */
-  }
+        position: relative;
+        /* or fixed if needed */
+        z-index: 1050;
+        /* Higher than the carousel's z-index */
+      }
 
-  .carousel {
-    z-index: 1000; /* Ensure carousel stays behind the navbar */
-  }
+      .navbar-nav a {
+        color: chartreuse;
+        text-align: end;
+      }
 
-  .greetings { 
-      position: absolute;
-      top: 135px;
-      margin-left: 130px;
-      /* margin-left: 40px; */
-      color: white;
-      z-index: 2000;
+      .carousel {
+        z-index: 1000;
+        /* Ensure carousel stays behind the navbar */
+      }
+
+      .greetings {
+        position: absolute;
+        top: 135px;
+        margin-left: 160px;
+        /* margin-left: 40px; */
+        color: white;
+        z-index: 2000;
+      }
+
+      .greetings h2 {
+        margin-top: -60px;
+        /* margin-top: -65px; */
+        font-size: 15px;
+      }
+
+      .greetings p {
+        margin-top: -10px;
+        font-size: 12px;
+      }
+
+      .greetings a {
+        /* float: right; */
+        margin-top: -34px;
+        margin-right: -30px;
+        font-size: 12px;
+        /* margin-top: -35px; */
+      }
+
+      .service1 h2 {
+        position: absolute;
+        top: 10px;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+
+      .service1 button {
+        position: absolute;
+        top: 95px;
+        /* top: 410px; */
+        color: white;
+        margin-left: 12px;
+        text-align: center;
+        font-size: 12px;
+        background-color: blue;
+      }
+
+      .service2 h2 {
+        position: absolute;
+        top: 10px;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+
+      .service2 button {
+        position: absolute;
+        top: 95px;
+        /* top: 410px; */
+        color: white;
+        margin-left: 12px;
+        text-align: center;
+        font-size: 12px;
+        background-color: blue;
+      }
+
+      .service3 h2 {
+        position: absolute;
+        top: 10px;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+
+      .service3 button {
+        position: absolute;
+        top: 95px;
+        /* top: 410px; */
+        color: white;
+        margin-left: 12px;
+        text-align: center;
+        font-size: 12px;
+        background-color: blue;
+      }
+
+      .active-first img {
+        height: 332px;
+        /* height: 807px; */
+      }
+
+      .carousel-item1 img {
+        height: 332px;
+        /* height: 308px; */
+      }
+
     }
-
-    .greetings h2 {
-      margin-top: -60px;
-      /* margin-top: -65px; */
-      font-size: 15px;
-    }
-
-    .greetings p {
-      margin-top: -10px;
-      font-size: 12px;
-    }
-
-    .greetings a {
-      /* float: right; */
-      margin-top: -34px;
-      margin-right: -30px;
-      font-size: 12px;
-      /* margin-top: -35px; */
-    }
-    .service h2{
-      position: absolute;
-      top:10px;
-     font-size:25px;
-    }
-
- }
-    
   </style>
 
 </head>
@@ -236,51 +426,54 @@ if (!isset($_SESSION['id'])) {
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-      <!-- <button id="menu-toggle" class="menu-toggle" onclick="toggleSidebar()">=</button>
-       <i class="fa-duotone fa-regular fa-bars"></i> -->
       <div class="container-fluid">
-        <img src="Images/favicon.ico" alt="Favicon">
-        <a class="navbar-brand" href="#">Kriscross</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <img src="Images/favicon.ico" alt="Favicon">
+        <a class="navbar-brand" href="#">Kriscross</a> 
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
+
+        <!-- Custom toggle button introduced  -->
+        <button class="custom-toggle" type="button" id="navToggle">&#9776;</button>
+
+        <!-- Navbar menu items -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item home">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" style="color: blue;" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" style="color: blue;" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" style="color: blue;" href="#">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" style="color: blue;" href="#">Projects</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" style="color: blue;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Dropdown
               </a>
-              <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul> -->
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacts</a>
-            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
           </ul>
           <form class="d-flex">
-            <a href="#">kriscross@gmail.com</a>
-            <!-- <input class="form-control me-2" type="search" value="kriscross@gmail.com" aria-label="Search"> -->
-            <!-- <button class="btn btn-outline-success" type="submit">Send</button> -->
+            <!-- <a href="mailto:kriscross@gmail.com">kriscross@gmail.com</a> -->
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
           </form>
         </div>
       </div>
@@ -304,16 +497,27 @@ if (!isset($_SESSION['id'])) {
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active active-first">
-          <img src="Images/StockCake-Professional woman smiling_1741872393.jpg" class="d-block w-100" alt="...">
+          <img src="Images/beautiful_woman3.jpg" class="d-block w-100" alt="...">
+          <div class="service1">
+            <h2>Financial solutions<br>for New business.</h2><br>
+            <button type="button"><small><small>FINANCIAL SERVICES</small></small></button>
+          </div>
+        </div>
+        <div class="carousel-item carousel-item1">
+          <img src="Images/side-view-beautiful-woman-with-braids.jpg" class="d-block w-100" alt="...">
+          <div class="service2">
+            <h2>Your financial freedom<br>is Our priority.</h2><br>
+            <button type="button"><small><small>FINANCIAL SERVICES</small></small></button>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="Images/side-view-beautiful-woman-with-braids.jpg" class="d-block w-100" alt="...">
-          <div class="service">
-      <h2>Financial solutions<br>for New business.</h2><br>
-      <button type="button"><small><small>FINANCIAL SERVICES</small></small></button>
-    </div>
+          <img src="Images/beautiful_woman2.jpg" class="d-block w-100" alt="...">
+          <div class="service3">
+            <h2>Lets take your business<br>to a New height.</h2><br>
+            <button type="button"><small><small>FINANCIAL SERVICES</small></small></button>
+          </div>
         </div>
-      
+
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
         data-bs-slide="prev">
@@ -326,11 +530,6 @@ if (!isset($_SESSION['id'])) {
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <!-- <div class="service">
-      <h2>Financial solutions<br>for New business.</h2><br>
-      <button type="button"><small><small>FINANCIAL SERVICES</small></small></button>
-    </div> -->
-
   </section>
 
   <!-- Section for card -->
@@ -401,6 +600,47 @@ if (!isset($_SESSION['id'])) {
       </div>
     </div>
   </section>
+  <!-- Section for footer -->
+  <section>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Call us:</h5>
+            <p class="card-text">You can reach us on phone for further discussions.</p>
+            <!-- <a href="tel:+2348035217748" class="btn btn-primary"><img src="Images/phone_icon1.png" alt=""></a> -->
+            <a href="tel:+2348035217748"><img src="Images/phone_icon1.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Email us:</h5>
+            <p class="card-text">Email us on any issues and/or inquiries you may have.</p>
+            <!-- <a href="mailto:kriscross@gmail.com" class="btn btn-primary"><img src="Images/email_icon1.png" alt=""></a> -->
+            <a href="mailto:kriscross@gmail.com"><img src="Images/email_icon1.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Chat with us:</h5>
+            <p class="card-text">Chat with one of our experienced support personnel.</p>
+            <!-- <a href="https://wa.me/2348035217748" class="btn btn-primary"><img src="Images/chat_icon1.png" alt=""></a> -->
+            <a href="https://wa.me/2348035217748"><img src="Images/chat_icon1.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <div class="text-center p-4" style="background-color: #f1f1f1;">
+        © 2025 Kriscross. All rights reserved.
+        <a class="text-reset fw-bold" href="#">Privacy Policy</a>
+      </div>
+    </footer>
+  </section>
 
   <!-- Section for greetings -->
   <section>
@@ -420,14 +660,28 @@ if (!isset($_SESSION['id'])) {
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> -->
 
   <!-- <script>function toggleSidebar() { document.getElementById("sidebar").classList.toggle("active"); }</script> -->
+
+  <!-- Custom toggle functionality -->
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      const nav = document.getElementById('navbarSupportedContent');
+      nav.classList.toggle('show');
+    });
+  </script>
 
 </body>
 
